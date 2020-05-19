@@ -1,0 +1,18 @@
+<div class="container">
+  <p><%= @task.title %></p>
+  <p><%= @task.details %></p>
+</div>
+<div>
+  <% if @task.completed %>
+  <p><%= "This task is already completed" %></p>
+  <% else %>
+  <p><%= "This task is not yet completed" %></p>
+  <% end %>
+</div>
+
+<%= link_to "Back to all tasks", tasks_path %>
+
+<%= link_to "Edit this task", edit_task_path(@task)  %>
+
+<!-- <i class="far fa-square">test</i> -->
+<p></p>
